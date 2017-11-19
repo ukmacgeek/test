@@ -2,8 +2,8 @@
 
 from random import randint
 
-player = input('rock (r) , paper (p) , stone (s)?')
-print(player,'vs')
+player = raw_input('rock (r) , paper (p) , stone (s)?')
+print player + ' vs '
 
 chosen = randint(1,3)
 print(chosen)
