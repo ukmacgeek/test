@@ -6,9 +6,13 @@ import urllib2
 import time
 
 # Enter postcode from command line
-postcode = raw_input('Please provide your postcode : ')
+postcode = raw_input('Please provide your postcode : ').lower()
+postcode = postcode.replace(' ','')
 
 #make sure we take out all spaces and special characters
+if not postcode.isalnum():
+   print 'Please provide the postcode with no spaces or special characters'
+   exit()
 # Pull code to get API Key from file
 
 # Start getting data from google maps based on postcode
